@@ -36,7 +36,9 @@ var arrStudenti = [
 for (let i = 0; i < arrStudenti.length; i++) {
 
     for (const key in arrStudenti[i]) {
-        console.log(`${key} : ${arrStudenti[i][key]}`);
+        if (key != "età") {
+            console.log(`${key} : ${arrStudenti[i][key]}`);
+        }
     }
 
 }
