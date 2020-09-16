@@ -51,6 +51,7 @@ nuovoStudente.nome = prompt("Nome");
 nuovoStudente.cognome = prompt("Cognome");
 nuovoStudente.età = parseInt(prompt("Nome"), 10);
 
+arrStudenti.push(nuovoStudente);
 console.log(nuovoStudente);
 
 
@@ -58,6 +59,7 @@ console.log(nuovoStudente);
 var source = document.getElementById("entry-template").innerHTML;
 var template = Handlebars.compile(source);
 
-var html = template(nuovoStudente);
-
-$("#test").append(html);
+for (let i = 0; i < arrStudenti.length; i++) {
+    var html = template(arrStudenti[i]);
+    $("#test").append(html);
+}
